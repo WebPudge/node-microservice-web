@@ -1,7 +1,7 @@
 version: '3.0'
 
 services:
-  # consul server，对外暴露的ui接口为8500，只有在3台consul服务器的情况下集群才起作用
+  # consul server，对外暴露的ui接口为8500，只有在2台consul服务器的情况下集群才起作用
   consulserver:
     image: progrium/consul:latest
     hostname: consulserver
@@ -10,7 +10,7 @@ services:
       - "8400"
       - "8500:8500"
       - "53"
-    command: -server -ui-dir /ui -data-dir /tmp/consul --bootstrap-expect=3
+    command: -server -ui-dir /ui -data-dir /tmp/consul --bootstrap-expect=2
 
   # consul server1在consul server服务起来后，加入集群中
   consulserver1:
