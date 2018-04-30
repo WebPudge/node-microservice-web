@@ -1,17 +1,18 @@
-const http = require('http');
+const Application = require('koa');
+const app = new Application();
+const Router = require('koa-router');
+const router = new Router();
 const ip = require('ip');
-const server = http.createServer((req, res) => {
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'text/plain');
-    res.end(`remoteIP:${getClientIp(req)},localhost:${ip.address()}`);
-});
-server.listen(3000, '0.0.0.0', () => {
-    console.log(`Server running at 3000 `);
-});
-function getClientIp(req) {
-    let ip = req.headers['x-forwarded-for'] || req.ip ||req.connection.remoteAddress || req.socket.remoteAddress || req.connection.socket.remoteAddress || '';
-    if (ip.split(',').length > 0) {
-        ip = ip.split(',')[0]
+const debug = require('debug')('dev:router');
+router.get('/getRemoteIp', async(ctx) => {
+    ctx.body = {
+        ip: ip.address()
     }
-    return ip;
-};
+})
+//监听3000端口
+app.listen(3000, '0.0.0.0', () => {
+    debug('Server running at 3000 ');
+});
+app
+    .use(router.routes())
+    .use(router.allowedMethods);
