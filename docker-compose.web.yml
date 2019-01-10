@@ -1,9 +1,9 @@
 version: '3.0'
-# 启动node-service-web节点服务
+# 启动node-microservice-web节点服务
 services:
   web:
     image: fasimito/node-microservice-web
     environment:
-      SERVICE_3000_NAME: service-web
+      SERVICE_3000_NAME: microservice-web
     ports:
       - "3000"
