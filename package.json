@@ -7,11 +7,18 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js"
   },
+  "author": "fasimito",
+  "license": "ISC",
   "dependencies": {
     "debug": "^3.1.0",
     "ip": "^1.1.5",
     "koa": "^2.5.1",
     "koa-router": "^7.4.0"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fasimito/node-microservice-web.git"
+  },
+  "homepage": "https://github.com/fasimito/node-microservice-web#readme"
 }
