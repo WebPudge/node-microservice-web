@@ -1,10 +1,7 @@
 FROM node:alpine
-
 RUN mkdir -p /opt/data/
 WORKDIR /opt/data
-
 COPY . /opt/data
-RUN npm install
+RUN npm install -g cnpm --registry=http://r.cnpmjs.org
 EXPOSE 3000
-
 CMD npm start
