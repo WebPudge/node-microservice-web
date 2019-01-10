@@ -29,3 +29,14 @@ please run the next command:
 >docker-compose -f docker-compose.web.yml up -d --scale web=3
 
 up till now, you have setup all the environment. so easy.
+
+## Step 4: Check
+
+After all the container is running, we should have a check of the microservice environments.
+1. check the containers:
+>docker ps -a
+
+should list all the containers, if some one's status is not up, you should run the command
+>docker logs [container ID]
+
+to check the container's log to get the reason and resolve the problems.
