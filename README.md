@@ -23,6 +23,6 @@ to start the basic running env.
 
 please run the next command:
 
->docker-compose -f docker-compose.web.yml --scale 3 web
+>docker-compose -f docker-compose.web.yml up -d --scale web=3
 
 up till now, you have setup all the environment. so easy.
