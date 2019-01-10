@@ -1,4 +1,4 @@
-# node-service-test-web
+# node-microservice-web
 
 consul microservice test based on nodejs
 
