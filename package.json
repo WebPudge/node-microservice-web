@@ -1,27 +1,17 @@
 {
-  "name": "service-test-web",
-  "version": "1.0.0",
-  "description": "consul 服务测试",
+  "name": "node-microservice-web",
+  "version": "0.0.1",
+  "description": "consul microservice testing",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "debug": "^3.1.0",
     "ip": "^1.1.5",
     "koa": "^2.5.1",
     "koa-router": "^7.4.0"
   },
-  "devDependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/chenchunyong/node-service-test-web.git"
-  },
-  "bugs": {
-    "url": "https://github.com/chenchunyong/node-service-test-web/issues"
-  },
-  "homepage": "https://github.com/chenchunyong/node-service-test-web#readme"
+  "devDependencies": {}
 }

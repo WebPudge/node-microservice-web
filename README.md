@@ -1,3 +1,3 @@
 # node-service-test-web
 
-consul 服务测试
+consul microservice test based on nodejs
