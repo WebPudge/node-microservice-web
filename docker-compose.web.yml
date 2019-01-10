@@ -1,5 +1,5 @@
 version: '3.0'
-# 启动node-microservice-web节点服务
+# start node-microservice-web service
 services:
   web:
     image: fasimito/node-microservice-web
