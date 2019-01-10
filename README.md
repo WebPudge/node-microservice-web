@@ -9,6 +9,8 @@ but unfortunately, I would not show you how to do that, please <a href="www.goog
 please check the Dockerfile, there are many scripts in the file which means make a docker image. run the next command:
 >docker build -t fasimito/node-microservice-web .
 
+Notes: please don't lost the last "."(dot)
+
 ## Step 2: Run The docker-compose to prepare for RUNNING ENV.
 
 please use the next command:
