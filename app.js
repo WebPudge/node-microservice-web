@@ -6,7 +6,7 @@ const router = new Router();
 const ip = require('ip');
 const debug = require('debug')('dev:router');
 
-router.get('/getServerIp', async(ctx) => {
+router.get('/microserviceweb/getServerIp', async(ctx) => {
     ctx.body = {
         ip: ip.address()
     }
